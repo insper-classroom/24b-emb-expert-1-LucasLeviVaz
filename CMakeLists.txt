@@ -31,3 +31,10 @@ endif()
 
 # Codes subdir:
 add_subdirectory(main)
+add_subdirectory(freertos)
+add_subdirectory(servo)
+
+
+
+
+#add_subdirectory(Examples)

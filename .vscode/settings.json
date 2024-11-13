@@ -40,6 +40,13 @@
          "buildTarget": {
              "visibility": "hidden"
          }
+},
+"files.associations": {
+    "gpio.h": "c",
+    "queue.h": "c",
+    "stdlib.h": "c",
+    "stdio.h": "c",
+    "string.h": "c"
 }
 
      
