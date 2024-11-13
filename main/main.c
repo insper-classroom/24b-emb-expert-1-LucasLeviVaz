@@ -30,8 +30,8 @@ typedef struct adc {
 } adc_t;
 
 void sensor_task(void *p) {
-    int currentMillisOne = 400;
-    int currentMillisTwo = 1600;
+    int currentMillisOne;
+    int currentMillisTwo;
 
     while (1) {
         adc_t data;
@@ -65,7 +65,7 @@ void joystick_task(void *p) {
         data.axis = 1;
 
 
-        if (data.val < -900 && data.val > 900){
+        if (data.val < 900 && data.val > 600){
             data.val = 0;
         }
 
@@ -81,7 +81,7 @@ void joystick_task(void *p) {
         data.val = (raw_value_x * (2400 - 400)) / 4095 + 400;  // Mapeamento de 0-4095 para 400-2400
         data.axis = 0;
 
-        if (data.val < -900 && data.val > 900){
+        if (data.val < 900 && data.val > 600){
             data.val = 0;
         }
         printf("X Axis: %d\n", data.val);  // Para depuração
